@@ -1,0 +1,183 @@
+.bg{
+    background:url('../image/doctor_login.jpg') no-repeat;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+}
+
+.navbar-default{
+    background-color: #2471A3;
+}
+
+.logout > .logoutBtn:hover{
+    background:#3e93cc !important ;
+    }
+    
+.dropdown > .serviceBtn:hover{
+    background:#3e93cc !important ;
+    }
+
+.form-container{
+    border:0px solid;
+    padding: 30px 60px;
+    margin-top:20vh;
+    -webkit-box-shadow: 1px 4px 26px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 4px 26px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 4px 26px 6px rgba(0,0,0,0.75);
+}
+
+.form-centre{
+    border-bottom-style:dashed;
+}
+
+.officerdatabase{
+    border-bottom-style:dashed;
+}
+
+.btn1{
+    margin-bottom:10px;
+    border-radius:8px;
+}
+
+.form-registration{
+    background-color: beige;
+    border-radius:8px;
+}
+
+.form-UpdateRec{
+    background-color: beige;
+    border-radius:8px;
+}
+
+.form-Record{
+    background-color: beige;
+    border-radius:8px;
+}
+
+.stock-page{
+    background-color: beige;
+    border-radius:8px;
+    border-bottom-style: dashed;
+}
+
+.form-group-radio{
+    margin-left:1em;
+}
+
+#title-label{
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 12px;
+    padding-bottom: 10px;
+    background-color:#2471A3;
+    color:#F4D03F;
+    border-radius: 8px;
+}
+
+/*footer*/
+.page-footer{
+    background-color: #33b5e5;
+    color:white;
+}
+
+.btn-fb {
+    font-size: 30px;
+}
+
+.btn-tw {
+    font-size: 30px;
+}
+
+.btn-gplus {
+    font-size: 30px;
+}
+
+.footer-copyright {
+    background-color: #0099CC;
+}
+
+#page-link{
+    color:#F4D03F;
+}
+
+/*LocateHealthFacilities*/
+.HS table,
+.HS th,
+.HS td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+.HS tr:nth-child(1){
+    background-color: #2471a3;
+    color: white;
+}
+
+.HS tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.HS tbody tr:last-of-type {
+    border-bottom: 2px solid #f4d03f;
+}
+
+.HS tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.HealthFacilities h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.new1 {
+    border: solid 2px grey;
+}
+
+.safety h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list1 {
+    font-size: x-large;
+}
+
+.list2 {
+    font-size: x-large;
+}
+
+/*Patient view history*/
+/*LocateHealthFacilities*/
+.PVH table,
+.PVH th,
+.PVH td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+.PVH tr:nth-child(1){
+    background-color: #2471a3;
+    color: white;
+}
+
+.PVH tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.PVH tbody tr:last-of-type {
+    border-bottom: 2px solid #f4d03f;
+}
+
+.PVH tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/*logout button*/
+.logoutBtn {
+    font-size: 16px;
+    width: fit-content;
+    height: 50px;
+}

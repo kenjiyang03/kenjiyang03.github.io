@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record New Test</title>
+    
+    <!-- CSS Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/jquery.dataTables.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/807de7ada5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" style="background-color:#3e93cc" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar" style="background-color:#F4D03F;"></span>
+              <span class="icon-bar" style="background-color:#F4D03F;"></span>
+              <span class="icon-bar" style="background-color:#F4D03F;"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color:#F4D03F;">CTIS</a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active logout"><input type="button" value="Logout" onclick="confirmpopup()"  class="logoutBtn" style="color:#F4D03F; background-color:#2471A3;"><span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle serviceBtn" style="color:#F4D03F; background-color:#2471A3;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="background-color:white">
+                  <li><a href="registrationpage.html">Register New Centre</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="registrationofficer.html">Register New Officer</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="stockpage.html">Manage Test Kit Stock</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="RecordNewTest.html">Record New Test</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="UpdateExistingRec.html">Update Existing Record</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="UpdateTestResult.html">Update Test Result</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="testReports.html">All Test Reports</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+    <div class="container form-Record">
+      <h1 id="title-label">Record New Test</h1>
+        <form  id="registerBtn1" class="form-centre">
+          <div class="form-group col-md-12">
+      <label for="inputname">Patient Name</label>
+      <input type="text" class="form-control" id="inputPatientName" placeholder="Muhammad" required="">
+      </div>
+          <div class="form-group col-md-4">
+          <label for="inputPatienttype">Patient Type</label>
+          <select id="inputPatienttype" class="form-control">
+          <option selected>Choose...</option>
+          <option>Returnee</option>
+          <option>Quarantined</option>
+          <option>Close Contact</option>
+          <option>Infected</option>
+          <option>Suspected</option>
+          </select>
+      </div>
+             <div class="form-group col-md-2">
+          <label for="inputSymptoms">Symptoms</label>
+          <input type="text" class="form-control" id="inputSymptoms" required="">
+      </div>
+            <div class="form-group">
+                <div class="row">
+                  <div class="col text-center">
+                    <button class="btn2 btn-primary" onclick="myFunction()">Update</button>
+                  </div>
+                </div>
+              </div> 
+        </form>
+      </div>
+	  
+	  <p id="button"></p>
+
+		<script>
+		function myFunction() {
+		  var txt;
+		  if (confirm("Saved Successfully!")) {
+			txt = "You pressed OK!";
+		  } else {
+			txt = "You pressed Cancel!";
+		  }
+		  document.getElementById("button").innerHTML = txt;
+		}
+		</script>
+	  
+       <!-- Modal -->
+<div id="registration-officer" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Confirm Centre Submission</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to submit this application form?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">yes</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <div class="container form-registration mb-3 mt-3" style="padding-top:1em;">
+    <table id="centre-table"  class="table table-hover table-bordered table-striped"  width="100%"></table>
+  </div>
+
+  <br>
+ <!-- Footer -->
+<footer class="page-footer footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About Us</h5>
+        <p>We aim to provide the public with a accessible online database to check their test results.</p>
+        <p>Also offerring other health resources to help the public keep up to date with the current pandemic,
+          goverment
+          officials will also use this to keep track of patients.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!--hr-->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a id="page-link" href="registrationpage.html">Register New Centre</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a id="page-link" href="registrationofficer.html">Register New Officer</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a id="page-link" href="stockpage.html">Manage Test Kit Stock</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a id="page-link" href="RecordNewTest.html">Record New Test</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a id="page-link" href="UpdateExistingRec.html">Update Existing Record</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a id="page-link" href="UpdateTestResult.html">Update Test Result</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a id="page-link" href="testReports.html">All Test Reports</a>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!--hr-->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> Kuala Lumpur, KL 87100, MY</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> ctis@gmail.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i> + 017 234 567 88</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i> + 016 234 527 59</p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!--hr-->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+       
+        <ul style="list-style: none;">
+          <li>
+            <a type="button" class="btn-floating btn-fb">
+              <i class="fab fa-facebook-f">acebook</i>
+            </a>
+          </li>
+          <li>
+            <a type="button" class="btn-floating btn-tw">
+              <i class="fab fa-twitter">witter</i>
+            </a>
+          </li>
+          <li>
+            <a type="button" class="btn-floating btn-gplus">
+              <i class="fab fa-google-plus-g">oogle</i>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><br>©️ 2020 Copyright:
+    &copy; CTIS.com | Designed by Kenji,Muhammad,and Shafiq.
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+   <script src="js/ctis.js"></script>
+    <!-- jQuery CDN -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <!-- JavaScript Bootstrap CDN -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+   
+    
+</body>
+
+
+</html>
